@@ -6,9 +6,9 @@ services:
         -"3306:3306"
       command: --default-authentication-plugin=mysql_native_password
       environment:
-        MYSQL_DATABASE: OMRCH
-        MYSQL_PASSWORD: FaithSQL24
-        MYSQL_ROOT_PASSWORD: TioGazpacho
+        MYSQL_DATABASE: DB-NAME
+        MYSQL_PASSWORD: pass
+        MYSQL_ROOT_PASSWORD: pass
       volumes:
         - ./dump:/docker-entrypoint-initdb.d
         - ./conf:/etc/mysql/conf.d
@@ -32,9 +32,9 @@ services:
       ports:
           - 8000:80
       environment:
-          MYSQL_USER: sismo
-          MYSQL_PASSWORD: FaithSQL24
-          MYSQL_ROOT_PASSWORD: Gaspachin
+          MYSQL_USER: root
+          MYSQL_PASSWORD: pass
+          MYSQL_ROOT_PASSWORD: pass
     volumes:
       persistent:
 
